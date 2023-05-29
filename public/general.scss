@@ -1,0 +1,108 @@
+@import "/src/assets/colors/colors.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", "Prompt", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    background-color: $primaryBG;
+}
+
+#app {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+.heading-L {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.heading-M {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.heading-S {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.title-L {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.title-M {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.title-S {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.label-L {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.label-M {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.label-S {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.body-L {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.body-M {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.body-S {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.slide-vertical-enter-from {
+    opacity: 0;
+    transform: translateY(-2.4rem);
+}
+
+.slide-vertical-enter-active {
+    transition: all .3s ease-in-out
+}
+
+.slide-vertical-leave-to {
+    opacity: 0;
+    transform: translateY(-1.6rem);
+}
+
+.slide-vertical-leave-active {
+    transition: .3s all ease-in-out
+}
