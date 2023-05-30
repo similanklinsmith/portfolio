@@ -43,15 +43,24 @@
           </div>
           <div class="lower-section">
             <div class="leading-text label-S">Looking for more</div>
-            <div class="button">
+            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+              <template v-slot:icon>
+                <font-awesome-icon icon="fa-brands fa-linkedin" />
+              </template>
+            </BaseButton>
+            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+              <template v-slot:icon>
+                <font-awesome-icon icon="fa-brands fa-github" />
+              </template>
+            </BaseButton>
+            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+              <template v-slot:icon>
+                <font-awesome-icon icon="fa-solid fa-envelope" />
+              </template>
+            </BaseButton>
+            <!-- <div class="button">
               <font-awesome-icon icon="fa-brands fa-linkedin" />
-            </div>
-            <div class="button">
-              <font-awesome-icon icon="fa-brands fa-github" />
-            </div>
-            <div class="button">
-              <font-awesome-icon icon="fa-solid fa-envelope" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -114,12 +123,12 @@
                     Appointment Scheduling System for KMUTT secretaries
                   </div>
                 </div>
-                <div class="button">
-                  <font-awesome-icon
-                    icon="fa-free fa-arrow-right"
-                    class="icon"
-                  /><span class="label-L">see more</span>
-                </div>
+                <BaseButton
+                  :icon="'no-icon'"
+                  :style="'white'"
+                  :size="'base'"
+                  :buttonText="'see more'"
+                />
               </div>
               <div class="image-flex">
                 <div class="image-container">
@@ -148,12 +157,12 @@
                     Appointment Scheduling System for KMUTT secretaries
                   </div>
                 </div>
-                <div class="button">
-                  <font-awesome-icon
-                    icon="fa-free fa-arrow-right"
-                    class="icon"
-                  /><span class="label-L">see more</span>
-                </div>
+                <BaseButton
+                  :icon="'no-icon'"
+                  :style="'white'"
+                  :size="'base'"
+                  :buttonText="'see more'"
+                />
               </div>
               <div class="image-flex">
                 <div class="image-container">
@@ -180,12 +189,12 @@
                   <div class="title-M">Personal Work • Figma</div>
                   <div class="title-L">Redesign Twitter Mobile</div>
                 </div>
-                <div class="button">
-                  <font-awesome-icon
-                    icon="fa-free fa-arrow-right"
-                    class="icon"
-                  /><span class="label-L">see more</span>
-                </div>
+                <BaseButton
+                  :icon="'no-icon'"
+                  :style="'white'"
+                  :size="'base'"
+                  :buttonText="'see more'"
+                />
               </div>
               <div class="image-flex">
                 <div class="image-container">
@@ -204,12 +213,12 @@
                   <div class="title-M">Mini Project • Front-end Code</div>
                   <div class="title-L">SPA Mini Project</div>
                 </div>
-                <div class="button">
-                  <font-awesome-icon
-                    icon="fa-free fa-arrow-right"
-                    class="icon"
-                  /><span class="label-L">see more</span>
-                </div>
+                <BaseButton
+                  :icon="'no-icon'"
+                  :style="'white'"
+                  :size="'base'"
+                  :buttonText="'see more'"
+                />
               </div>
               <div class="image-flex">
                 <div class="image-container">
@@ -228,12 +237,12 @@
                   <div class="title-M">Personal Work • Figma</div>
                   <div class="title-L">Create MY Portfolio</div>
                 </div>
-                <div class="button">
-                  <font-awesome-icon
-                    icon="fa-free fa-arrow-right"
-                    class="icon"
-                  /><span class="label-L">see more</span>
-                </div>
+                <BaseButton
+                  :icon="'no-icon'"
+                  :style="'white'"
+                  :size="'base'"
+                  :buttonText="'see more'"
+                />
               </div>
               <div class="image-flex">
                 <div class="image-container">
@@ -336,10 +345,11 @@
 <script>
 import ActComp from "@/components/ActComp.vue";
 import HeadingComp from "@/components/UI/HeadingComp.vue";
+import BaseButton from "@/components/UI/BaseButton.vue";
 import SkillComp from "@/components/SkillComp.vue";
 export default {
   name: "App",
-  components: { ActComp, SkillComp, HeadingComp },
+  components: { ActComp, SkillComp, HeadingComp, BaseButton },
   data() {
     return {
       activities: [
@@ -488,10 +498,6 @@ export default {
         width: 14.472rem;
         width: 18.022rem;
       }
-      /* img {
-        width: 100%;
-        height: 100%;
-      } */
     }
     .profile {
       grid-column: 2 / span 2;
@@ -538,23 +544,6 @@ export default {
         align-items: center;
         .leading-text {
           color: $description;
-        }
-        .button {
-          font-size: 1.6rem;
-          color: $description;
-          width: 4rem;
-          height: 4rem;
-          border-radius: 50%;
-          background-color: $light2;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          transition: 0.25s all ease-in-out;
-          &:hover {
-            background-color: $light0;
-          }
         }
       }
     }
@@ -654,48 +643,6 @@ export default {
                 color: $light4;
               }
             }
-            .button {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 1.2rem 1.6rem;
-              width: auto;
-              height: fit-content;
-              background: $light4;
-              border-radius: 5rem;
-              flex: none;
-              cursor: pointer;
-              position: relative;
-              transition: 0.25s all ease-in-out;
-              overflow: hidden;
-              width: fit-content;
-              &:hover {
-                background-color: $light2;
-              }
-              .icon,
-              span {
-                margin: 0;
-                flex-shrink: 0;
-              }
-              .icon {
-                position: absolute;
-                margin-left: -100%;
-                transition: all 0.25s ease-in-out;
-                font-size: 1.6rem;
-                opacity: 0;
-              }
-              span {
-                transition: 0.25s all ease-in-out;
-              }
-              &:hover .icon {
-                margin-left: 0;
-                opacity: 1;
-              }
-              &:hover span {
-                opacity: 0;
-                margin-right: -100%;
-              }
-            }
           }
           .image-flex {
             display: flex;
@@ -752,48 +699,6 @@ export default {
               }
               .title-L {
                 color: $mainText;
-              }
-            }
-            .button {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 1.2rem 1.6rem;
-              width: auto;
-              height: fit-content;
-              background: $light4;
-              border-radius: 5rem;
-              flex: none;
-              cursor: pointer;
-              position: relative;
-              transition: 0.25s all ease-in-out;
-              overflow: hidden;
-              width: fit-content;
-              &:hover {
-                background-color: $light2;
-              }
-              .icon,
-              span {
-                margin: 0;
-                flex-shrink: 0;
-              }
-              .icon {
-                position: absolute;
-                margin-left: -100%;
-                transition: all 0.25s ease-in-out;
-                font-size: 1.6rem;
-                opacity: 0;
-              }
-              span {
-                transition: 0.25s all ease-in-out;
-              }
-              &:hover .icon {
-                margin-left: 0;
-                opacity: 1;
-              }
-              &:hover span {
-                opacity: 0;
-                margin-right: -100%;
               }
             }
           }
@@ -858,48 +763,6 @@ export default {
               }
               .title-L {
                 color: $light4;
-              }
-            }
-            .button {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 1.2rem 1.6rem;
-              width: auto;
-              height: fit-content;
-              background: $light4;
-              border-radius: 5rem;
-              flex: none;
-              cursor: pointer;
-              position: relative;
-              transition: 0.25s all ease-in-out;
-              overflow: hidden;
-              width: fit-content;
-              &:hover {
-                background-color: $light2;
-              }
-              .icon,
-              span {
-                margin: 0;
-                flex-shrink: 0;
-              }
-              .icon {
-                position: absolute;
-                margin-left: -100%;
-                transition: all 0.25s ease-in-out;
-                font-size: 1.6rem;
-                opacity: 0;
-              }
-              span {
-                transition: 0.25s all ease-in-out;
-              }
-              &:hover .icon {
-                margin-left: 0;
-                opacity: 1;
-              }
-              &:hover span {
-                opacity: 0;
-                margin-right: -100%;
               }
             }
           }
@@ -1071,13 +934,15 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2.4rem;
-    .contact, .menu {
+    .contact,
+    .menu {
       display: flex;
       flex-direction: column;
       row-gap: 2.4rem;
       color: $mainText;
       width: 100%;
-      .contact-content, .menu-content {
+      .contact-content,
+      .menu-content {
         display: flex;
         flex-direction: column;
         row-gap: 0.8rem;
