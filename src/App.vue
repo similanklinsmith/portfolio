@@ -21,6 +21,7 @@
             <Vue3Lottie
               animationLink="https://lottie.host/376f15af-e78d-41a2-b731-71e6e014ef38/2vt6ggf9RD.json"
               :speed="0.5"
+              class="lottie"
             />
           </client-only>
         </div>
@@ -55,12 +56,10 @@
         </div>
       </div>
       <div class="work-experience" v-motion-slide-visible-once-bottom>
-        <div class="heading">
-          <div class="heading-M">MY Working Experiences</div>
-          <div class="body-L">
-            Concluding the internship programme of university and part-time job
-          </div>
-        </div>
+        <HeadingComp
+          :heading="'MY Working Experiences'"
+          :subheading="'Concluding the internship programme of university and part-time job'"
+        />
         <div class="experiences">
           <div class="experience">
             <div class="leading">
@@ -101,13 +100,10 @@
         </div>
       </div>
       <div class="my-works" v-motion-slide-visible-once-bottom>
-        <div class="heading">
-          <div class="heading-M">MY Works</div>
-          <div class="body-L">
-            Concluding the personal works and senior project, since 2019s -
-            2023s
-          </div>
-        </div>
+        <HeadingComp
+          :heading="'MY Works'"
+          :subheading="'Concluding the personal works and senior project, since 2019s - 2023s'"
+        />
         <div class="works">
           <div class="first-row">
             <div class="work-1">
@@ -254,12 +250,10 @@
         </div>
       </div>
       <div class="university-acts" v-motion-slide-visible-once-bottom>
-        <div class="heading">
-          <div class="heading-M">MY University Acts</div>
-          <div class="body-L">
-            Concluding the activities in university from 2019s - 2023s
-          </div>
-        </div>
+        <HeadingComp
+          :heading="'MY University Acts'"
+          :subheading="'Concluding the activities in university from 2019s - 2023s'"
+        />
         <div class="act-container">
           <div v-for="(act, index) in activities" :key="act.id">
             <ActComp
@@ -280,10 +274,10 @@
         </div>
       </div>
       <div class="my-skills" v-motion-slide-visible-once-bottom>
-        <div class="heading">
-          <div class="heading-M">MY Skills</div>
-          <div class="body-L">Skills that I have learned and practiced</div>
-        </div>
+        <HeadingComp
+          :heading="'MY Skills'"
+          :subheading="'Skills that I have learned and practiced'"
+        />
         <div class="container-skill">
           <SkillComp
             v-for="skill in skills"
@@ -295,15 +289,57 @@
         </div>
       </div>
     </div>
+    <div class="footer" v-motion-slide-visible-once-bottom>
+      <div class="col-1">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="@/assets/images/portfolio_logo.png" alt="logo" />
+          </div>
+          <div class="title-M">DDIVDEEP</div>
+        </div>
+        <div class="looking-more">
+          <div class="button">
+            <font-awesome-icon icon="fa-brands fa-linkedin" />
+          </div>
+          <div class="button">
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </div>
+          <div class="button">
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+          </div>
+        </div>
+        <div class="copyright body-M">
+          © 2023 Similan Klinsmith. All rights reserved. <span>DDIVDEEP</span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="contact">
+          <div class="label-L">Contact</div>
+          <div class="contact-content body-M">
+            <div class="email">Email: deep25952@gmail.com</div>
+            <div class="tel">Tel: 063-598-3619</div>
+            <div class="linkedin">LinkedIn: Similan Klinsmith</div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="label-L">Menu</div>
+          <div class="menu-content body-M">
+            <div class="home">Home</div>
+            <div class="about">About</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import ActComp from "@/components/ActComp.vue";
+import HeadingComp from "@/components/UI/HeadingComp.vue";
 import SkillComp from "@/components/SkillComp.vue";
 export default {
   name: "App",
-  components: { ActComp, SkillComp },
+  components: { ActComp, SkillComp, HeadingComp },
   data() {
     return {
       activities: [
@@ -432,19 +468,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 4.8rem 0 9rem;
+  padding: 4.8rem 0 0rem;
   gap: 9rem;
-  .heading {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.8rem;
-    .heading-M {
-      color: $heading;
-    }
-    .body-L {
-      color: $subHeading;
-    }
-  }
   .header-section {
     padding: 0 17.6rem;
     display: grid;
@@ -459,6 +484,10 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      .lottie {
+        width: 14.472rem;
+        width: 18.022rem;
+      }
       /* img {
         width: 100%;
         height: 100%;
@@ -524,7 +553,7 @@ export default {
           cursor: pointer;
           transition: 0.25s all ease-in-out;
           &:hover {
-            background-color: $light1;
+            background-color: $light0;
           }
         }
       }
@@ -977,13 +1006,82 @@ export default {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding: 4.8rem 17.6rem;
+    padding: 4.8rem 17.6rem 7.2rem 17.6rem;
     row-gap: 3.2rem;
     background-color: $light2;
     .container-skill {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.6rem;
+    }
+  }
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+  padding: 6.4rem 17.6rem;
+  background-color: $light1;
+  .col-1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      column-gap: 1.2rem;
+      .logo {
+        width: 3.6rem;
+        height: 3.6rem;
+        img {
+          width: 100%;
+          height: 100%;
+          max-width: 3.6rem;
+          max-height: 3.6rem;
+        }
+      }
+      .title-M {
+        color: $mainText;
+      }
+    }
+    .looking-more {
+      display: flex;
+      column-gap: 1.6rem;
+      .button {
+        font-size: 1.6rem;
+        color: $description;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $light2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.25s all ease-in-out;
+        &:hover {
+          background-color: $light0;
+        }
+      }
+    }
+  }
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+    .contact, .menu {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.4rem;
+      color: $mainText;
+      width: 100%;
+      .contact-content, .menu-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.8rem;
+      }
     }
   }
 }
