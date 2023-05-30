@@ -42,21 +42,38 @@
           </div>
           <div class="lower-section">
             <div class="leading-text label-S">Looking for more</div>
-            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+            <BaseButton
+              :icon="'only-icon'"
+              :style="'gray'"
+              :size="'small'"
+              @onClick="
+                openLink(
+                  'https://www.linkedin.com/in/similan-klinsmith-a89379258/'
+                )
+              "
+            >
               <template v-slot:icon>
                 <font-awesome-icon icon="fa-brands fa-linkedin" />
               </template>
             </BaseButton>
-            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+
+            <BaseButton
+              :icon="'only-icon'"
+              :style="'gray'"
+              :size="'small'"
+              @onClick="openLink('https://github.com/similanklinsmith')"
+            >
               <template v-slot:icon>
                 <font-awesome-icon icon="fa-brands fa-github" />
               </template>
             </BaseButton>
-            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
-              <template v-slot:icon>
-                <font-awesome-icon icon="fa-solid fa-envelope" />
-              </template>
-            </BaseButton>
+            <a href="mailto:deep25952@gmail.com">
+              <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+                <template v-slot:icon>
+                  <font-awesome-icon icon="fa-solid fa-envelope" />
+                </template>
+              </BaseButton>
+            </a>
           </div>
         </div>
       </div>
@@ -124,6 +141,11 @@
                   :style="'white'"
                   :size="'base'"
                   :buttonText="'see more'"
+                  @onClick="
+                    openLink(
+                      'https://github.com/similanklinsmith/senior_project'
+                    )
+                  "
                 />
               </div>
               <div class="image-flex">
@@ -158,6 +180,11 @@
                   :style="'white'"
                   :size="'base'"
                   :buttonText="'see more'"
+                  @onClick="
+                    openLink(
+                      'https://www.figma.com/file/qBd8vG5H8XLJFVLzHW8HqP/INT365?type=design&node-id=11%3A91&t=WmoGgoO2SCvaMYFn-1'
+                    )
+                  "
                 />
               </div>
               <div class="image-flex">
@@ -190,6 +217,11 @@
                   :style="'white'"
                   :size="'base'"
                   :buttonText="'see more'"
+                  @onClick="
+                    openLink(
+                      'https://www.figma.com/file/SSOBohQWSs6E2cunUqVbTq/redesign-twitter?type=design&node-id=903%3A6&t=mFl0fmoJZJmtBRbb-1'
+                    )
+                  "
                 />
               </div>
               <div class="image-flex">
@@ -214,6 +246,11 @@
                   :style="'white'"
                   :size="'base'"
                   :buttonText="'see more'"
+                  @onClick="
+                    openLink(
+                      'https://github.com/similanklinsmith/INT222_FrontEnd'
+                    )
+                  "
                 />
               </div>
               <div class="image-flex">
@@ -238,6 +275,11 @@
                   :style="'white'"
                   :size="'base'"
                   :buttonText="'see more'"
+                  @onClick="
+                    openLink(
+                      'https://www.figma.com/file/riICj2v64aguQHNAXnaqr5/PORTFOLIO?type=design&node-id=309%3A1755&t=C9R1I4XNanBdy37N-1'
+                    )
+                  "
                 />
               </div>
               <div class="image-flex">
@@ -303,15 +345,37 @@
           <div class="title-M">DDIVDEEP</div>
         </div>
         <div class="looking-more">
-          <div class="button">
-            <font-awesome-icon icon="fa-brands fa-linkedin" />
-          </div>
-          <div class="button">
-            <font-awesome-icon icon="fa-brands fa-github" />
-          </div>
-          <div class="button">
-            <font-awesome-icon icon="fa-solid fa-envelope" />
-          </div>
+          <BaseButton
+            :icon="'only-icon'"
+            :style="'gray'"
+            :size="'small'"
+            @onClick="
+              openLink(
+                'https://www.linkedin.com/in/similan-klinsmith-a89379258/'
+              )
+            "
+          >
+            <template v-slot:icon>
+              <font-awesome-icon icon="fa-brands fa-linkedin" />
+            </template>
+          </BaseButton>
+          <BaseButton
+            :icon="'only-icon'"
+            :style="'gray'"
+            :size="'small'"
+            @onClick="openLink('https://github.com/similanklinsmith')"
+          >
+            <template v-slot:icon>
+              <font-awesome-icon icon="fa-brands fa-github" />
+            </template>
+          </BaseButton>
+          <a href="mailto:deep25952@gmail.com">
+            <BaseButton :icon="'only-icon'" :style="'gray'" :size="'small'">
+              <template v-slot:icon>
+                <font-awesome-icon icon="fa-solid fa-envelope" />
+              </template>
+            </BaseButton>
+          </a>
         </div>
         <div class="copyright body-M">
           © 2023 Similan Klinsmith. All rights reserved. <span>DDIVDEEP</span>
@@ -430,6 +494,9 @@ export default {
   methods: {
     toggle(index) {
       this.activities[index].isSelected = !this.activities[index].isSelected;
+    },
+    openLink(link) {
+      window.open(link, "_blank");
     },
   },
 };
@@ -907,23 +974,6 @@ export default {
     .looking-more {
       display: flex;
       column-gap: 1.6rem;
-      .button {
-        font-size: 1.6rem;
-        color: $description;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        background-color: $light2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.25s all ease-in-out;
-        &:hover {
-          background-color: $light0;
-        }
-      }
     }
   }
   .col-2 {

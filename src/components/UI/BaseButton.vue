@@ -22,7 +22,12 @@
 export default {
   name: "BaseButton",
   props: ["size", "style", "icon", "buttonText"],
-};
+  methods: {
+    btnAction() {
+        this.$emit('onClick');
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
