@@ -16,7 +16,6 @@
     <div class="content">
       <div class="header-section" v-motion-slide-bottom>
         <div class="image-profile">
-          <!-- <img src="@/assets/images/portfolio_logo.png" alt="profile" /> -->
           <client-only>
             <Vue3Lottie
               animationLink="https://lottie.host/376f15af-e78d-41a2-b731-71e6e014ef38/2vt6ggf9RD.json"
@@ -58,9 +57,6 @@
                 <font-awesome-icon icon="fa-solid fa-envelope" />
               </template>
             </BaseButton>
-            <!-- <div class="button">
-              <font-awesome-icon icon="fa-brands fa-linkedin" />
-            </div> -->
           </div>
         </div>
       </div>
