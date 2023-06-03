@@ -23,7 +23,6 @@ export default {
   props: ["isToggled", "leading"],
   methods: {
     toggleAction() {
-      console.log("deep-inside");
       this.$emit("onToggle");
     },
   },
