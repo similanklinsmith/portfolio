@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="nav-bar">
+    <div class="nav-bar" id="navigator">
       <div class="logo title-S">
         <div class="image-logo">
           <img src="@/assets/images/portfolio_logo.png" alt="logo" />
@@ -8,9 +8,9 @@
         DDIVDEEP
       </div>
       <div class="tabs">
-        <div class="tab body-M">Home</div>
-        <div class="tab body-M">About</div>
-        <div class="tab body-M">TH|EN</div>
+        <BaseTab :tabText="'Home'" />
+        <BaseTab :tabText="'About'" />
+        <!-- <div class="tab body-M">TH|EN</div> -->
       </div>
     </div>
     <div class="content">
@@ -83,42 +83,24 @@
           :subheading="'Concluding the internship programme of university and part-time job'"
         />
         <div class="experiences">
-          <div class="experience">
-            <div class="leading">
-              <div class="icon label-L">🖥️</div>
-              <div class="leading-text">
-                <div class="label-L">INTERNSHIP</div>
-                <div class="label-S">Jan - April 2022</div>
-              </div>
-            </div>
-            <div class="lower-text body-M">
-              Being internship at Accenture Thailand as Front-end Developer
-            </div>
-          </div>
-          <div class="experience">
-            <div class="leading">
-              <div class="icon label-L">🖥️</div>
-              <div class="leading-text">
-                <div class="label-L">PART-TIME</div>
-                <div class="label-S">Jun - Jul 2022</div>
-              </div>
-            </div>
-            <div class="lower-text body-M">
-              Being Part-time at Accenture Thailand as Front-end Developer
-            </div>
-          </div>
-          <div class="experience">
-            <div class="leading">
-              <div class="icon label-L">🎨</div>
-              <div class="leading-text">
-                <div class="label-L">PART-TIME</div>
-                <div class="label-S">Jan - May 2023</div>
-              </div>
-            </div>
-            <div class="lower-text body-M">
-              Being Part-time at INNOVASIVE CO., LTD. as UX/UI Designer
-            </div>
-          </div>
+          <WorkComp
+            :emoji="'🖥️'"
+            :leading="'INTERNSHIP'"
+            :period="'Jan - April 2022'"
+            :content="'Being internship at Accenture Thailand as Front-end Developer'"
+          />
+          <WorkComp
+            :emoji="'🖥️'"
+            :leading="'PART-TIME'"
+            :period="'Jun - Jul 2022'"
+            :content="'Being Part-time at Accenture Thailand as Front-end Developer'"
+          />
+          <WorkComp
+            :emoji="'🎨'"
+            :leading="'PART-TIME'"
+            :period="'Jan - May 2023'"
+            :content="'Being Part-time at INNOVASIVE CO., LTD. as UX/UI Designer'"
+          />
         </div>
       </div>
       <div class="my-works" v-motion-slide-visible-once-bottom>
@@ -310,9 +292,7 @@
             >
               <template v-slot:content-act>
                 <ul v-for="(list, index) in act.content" :key="index">
-                  <li>
-                    {{ list }}
-                  </li>
+                  <li v-html="highlight(list, 'UX/UI designer')"></li>
                 </ul>
               </template>
             </ActComp>
@@ -406,10 +386,19 @@
 import ActComp from "@/components/ActComp.vue";
 import HeadingComp from "@/components/UI/HeadingComp.vue";
 import BaseButton from "@/components/UI/BaseButton.vue";
+import BaseTab from "@/components/UI/BaseTab.vue";
 import SkillComp from "@/components/SkillComp.vue";
+import WorkComp from "@/components/WorkComp.vue";
 export default {
   name: "App",
-  components: { ActComp, SkillComp, HeadingComp, BaseButton },
+  components: {
+    ActComp,
+    SkillComp,
+    HeadingComp,
+    WorkComp,
+    BaseButton,
+    BaseTab,
+  },
   data() {
     return {
       activities: [
@@ -440,7 +429,7 @@ export default {
             "Being responsible for the part of UX/UI designer and Front-end Developer of Integrated project I (INT221)",
             "Participating in the part of designing infographics for activity of the first year students -- IT#27 Starter Pack",
             "Being responsible for the part of UX/UI designer and Frontend Developer of Integrated project II (INT222)",
-            "Participating in the part of UX/UI and Graphic Design in website for students of SIT ITCHEATSHEET",
+            "Participating in the part of UX/UI designer and Graphic Design in website for students of SIT ITCHEATSHEET",
           ],
         },
         {
@@ -459,7 +448,7 @@ export default {
           isSelected: false,
           leading: "What had I done for 2023?",
           content: [
-            "Being part-time at INNOVASIVE CO., LTD. as UX/UI Designer",
+            "Being part-time at INNOVASIVE CO., LTD. as UX/UI designer",
           ],
         },
       ],
@@ -498,13 +487,37 @@ export default {
     openLink(link) {
       window.open(link, "_blank");
     },
+    highlight(content, query) {
+      return content.replace(new RegExp(query), (match) => {
+        return '<span style="color:#7452FF">' + match + "</span>";
+      });
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      window.scrollY > document.getElementById("navigator").offsetTop
+        ? document.getElementById("navigator").classList.add("fixed")
+        : document.getElementById("navigator").classList.remove("fixed");
+    });
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/colors/colors.scss";
+.fixed {
+  z-index: 8;
+  top: 0%;
+  position: fixed !important;
+  background-color: rgba(252, 252, 255, 0.75) !important;
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(100%) contrast(45%)
+    brightness(130%) !important;
+  box-shadow: 0 8px 32px 0 rgba(219, 210, 255, 0.37);
+  transition: 0.3s all ease-in-out;
+}
 .nav-bar {
+  transition: 0.3s all ease-in-out;
   position: relative;
   background: $light4;
   width: 100%;
@@ -531,11 +544,7 @@ export default {
 .tabs {
   display: flex;
   column-gap: 0.8rem;
-  .tab {
-    height: 100%;
-    width: 11.9rem;
-    text-align: center;
-  }
+  height: 100%;
 }
 .content {
   display: flex;
@@ -623,46 +632,6 @@ export default {
       flex-direction: row;
       column-gap: 1.6rem;
       width: 100%;
-      .experience {
-        background-color: $light4;
-        border-radius: 1.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3.2rem;
-        row-gap: 1.6rem;
-        width: 100%;
-        .leading {
-          display: flex;
-          flex-direction: column;
-          row-gap: 0.8rem;
-          align-items: center;
-          .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 4.8rem;
-            height: 4.8rem;
-            border-radius: 50%;
-            background-color: $primaryBG;
-          }
-          .leading-text {
-            display: flex;
-            flex-direction: column;
-            row-gap: 0.2rem;
-            .label-L {
-              color: $primaryMain;
-            }
-            .label-S {
-              color: $dark4;
-            }
-          }
-        }
-        .lower-text {
-          color: $mainText;
-          text-align: center;
-        }
-      }
     }
   }
   .my-works {
