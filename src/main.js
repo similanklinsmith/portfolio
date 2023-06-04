@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { MotionPlugin } from '@vueuse/motion'
+import router from "./router";
 import App from "./App.vue";
 import "../public/general.scss";
 /* import the fontawesome core */
@@ -8,9 +9,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 /* import specific icons */
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink } from "@fortawesome/free-solid-svg-icons";
 /* add icons to the library */
-library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical);
+library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink);
 import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(MotionPlugin).use(Vue3Lottie).mount("#app");
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(router).use(MotionPlugin).use(Vue3Lottie).mount("#app");
