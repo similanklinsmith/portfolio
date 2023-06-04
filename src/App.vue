@@ -107,6 +107,9 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
+    openLink(link) {
+      window.open(link, "_blank");
+    },
   },
   mounted() {
     window.addEventListener("scroll", () => {
