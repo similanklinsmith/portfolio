@@ -9,12 +9,24 @@
       </div>
       <div class="tabs">
         <router-link to="/" aria-label="home">
-          <BaseTab :tabText="'Home'" />
+          <BaseTab :tabText="text['navigators']['home']" />
         </router-link>
         <router-link to="/about-me" aria-label="about-me">
-          <BaseTab :tabText="'About'" />
+          <BaseTab :tabText="text['navigators']['about']" />
         </router-link>
-        <!-- <div class="tab body-M">TH|EN</div> -->
+        <div class="langs body-M">
+          <span
+            class="TH"
+            @click="changeLanguage('th')"
+            :style="lang == 'th' ? { color: '#7452FF', fontWeight: '600' } : {}"
+            >TH</span
+          >|<span
+            class="EN"
+            @click="changeLanguage('en')"
+            :style="lang == 'en' ? { color: '#7452FF', fontWeight: '600' } : {}"
+            >EN</span
+          >
+        </div>
       </div>
     </div>
     <div class="content">
@@ -71,21 +83,23 @@
       </div>
       <div class="col-2">
         <div class="contact">
-          <div class="label-L">Contact</div>
+          <div class="label-L">{{ text["footer"]["contact"] }}</div>
           <div class="contact-content body-M">
-            <div class="email">Email: deep25952@gmail.com</div>
-            <div class="tel">Tel: 063-598-3619</div>
+            <div class="email">
+              {{ text["footer"]["email"] }}: deep25952@gmail.com
+            </div>
+            <div class="tel">{{ text["footer"]["tel"] }}: 063-598-3619</div>
             <div class="linkedin">LinkedIn: Similan Klinsmith</div>
           </div>
         </div>
         <div class="menu">
-          <div class="label-L">Menu</div>
+          <div class="label-L">{{ text["footer"]["menu"] }}</div>
           <div class="menu-content body-M">
             <router-link to="/" aria-label="home">
-              <div class="home">Home</div>
+              <div class="home">{{ text["footer"]["home"] }}</div>
             </router-link>
             <router-link to="/about-me" aria-label="about-me">
-              <div class="about">About</div>
+              <div class="about">{{ text["footer"]["about"] }}</div>
             </router-link>
           </div>
         </div>
@@ -103,6 +117,12 @@ export default {
     BaseTab,
     BaseButton,
   },
+  data() {
+    return {
+      lang: null,
+      text: null,
+    };
+  },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
@@ -110,6 +130,19 @@ export default {
     openLink(link) {
       window.open(link, "_blank");
     },
+    changeLanguage(lang) {
+      this.$cookies.set("lang", lang);
+      window.location.reload();
+      this.scrollToTop();
+    },
+  },
+  beforeMount() {
+    if (this.$cookies.get("lang")) {
+      this.lang = this.$cookies.get("lang");
+    } else {
+      this.lang = "en";
+    }
+    this.text = require(`@/assets/langs/${this.lang}.json`);
   },
   mounted() {
     window.addEventListener("scroll", () => {
@@ -164,6 +197,22 @@ export default {
   display: flex;
   column-gap: 0.8rem;
   height: 100%;
+  .langs {
+    display: flex;
+    column-gap: 0.8rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 11.9rem;
+    color: $mainText;
+    span {
+      cursor: pointer;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        color: $primaryMain;
+      }
+    }
+  }
 }
 .content {
   display: flex;

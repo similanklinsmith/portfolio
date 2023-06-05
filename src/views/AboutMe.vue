@@ -3,15 +3,12 @@
     <div class="col-1">
       <div class="profile">
         <div class="img-profile">
-          <img
-            src="@/assets/images/profile_2.jpg"
-            alt="profile"
-          />
+          <img src="@/assets/images/profile_2.jpg" alt="profile" />
         </div>
         <div class="content">
           <div class="name">
-            <div class="label-L">Similan Klinsmith</div>
-            <div class="body-M">Front-end • UX/UI Designer</div>
+            <div class="label-L">{{ text["about"]["name"] }}</div>
+            <div class="body-M">UX/UI Designer • Front-end</div>
           </div>
           <div class="contact">
             <BaseButton
@@ -50,62 +47,55 @@
         </div>
       </div>
       <div class="about-me">
-        <div class="label-L">About ME</div>
-        <div class="body-M">
-          “ Presently, I am fourth-year student which I will have graduated in
-          in May, 2023, in faculty of SIT (School of Information Technology) at
-          KMUTT(King Mongkut’s University of Technology Thonburi) who is willing
-          to acquire new knowledge and improve myself all the time. I am seeking
-          for this position of your organization to utilize my skills in
-          maximum. Furthermore, it would be a great opportunity to be a part
-          with a professional team.”
+        <div class="label-L">{{ text["about"]["aboutLeading"] }}</div>
+        <div class="body-M">{{ text["about"]["aboutContent"] }}
         </div>
       </div>
       <div class="personal-information">
-        <div class="label-L">Personal Information</div>
+        <div class="label-L">{{ text["about"]["personalLeading"] }}</div>
         <div class="row-1">
           <div class="info">
             <div class="leading-icon body-M">
               <font-awesome-icon icon="fa-solid fa-envelope" />
             </div>
-            <KeyValueComp :leading="'Email'" :value="'deep25952@gmail.com'" />
+            <KeyValueComp :leading="text['about']['emailLeading']" :value="'deep25952@gmail.com'" />
           </div>
           <div class="info">
             <div class="leading-icon body-M">
               <font-awesome-icon icon="fa-solid fa-mobile" />
             </div>
-            <KeyValueComp :leading="'Phone Number'" :value="'063-598-3619'" />
+            <KeyValueComp :leading="text['about']['phoneLeading']" :value="'063-598-3619'" />
           </div>
         </div>
         <div class="info">
           <div class="leading-icon body-M">
             <font-awesome-icon icon="fa-solid fa-house" />
           </div>
-          <KeyValueComp :leading="'Location'" :value="'Bangkok, Thailand'" />
+          <KeyValueComp :leading="text['about']['locationLeading']" :value="text['about']['locationValue']" />
         </div>
       </div>
       <div class="education">
-        <div class="label-L">Education</div>
+        <div class="label-L">{{ text['about']['educationLeading'] }}</div>
         <div class="info">
           <div class="leading-icon body-M">
             <font-awesome-icon icon="fa-solid fa-envelope" />
           </div>
           <KeyValueComp
-            :leading="'Graduation'"
-            :value="'King Mongkut’s University of Technology Thonburi (KMUTT) (Unofficially)'"
+            :leading="text['about']['graduationLeading']"
+            :value="text['about']['graduationValue']"
           />
         </div>
         <div class="info">
           <div class="leading-icon body-M">
             <font-awesome-icon icon="fa-solid fa-scroll" />
           </div>
-          <KeyValueComp :leading="'GPAX'" :value="'3.62 (30-May-2023)'" />
+          <KeyValueComp :leading="text['about']['GPAXLeading']" :value="text['about']['GPAXValue']" />
         </div>
       </div>
     </div>
     <div class="col-2">
       <div class="resume">
-        <div class="label-L">Resume</div>
+        <div class="label-L">{{ text['about']['resumeLeading'] }}</div>
         <BaseAttachment
           :isTrailing="true"
           :leadingIcon="'file-lines'"
@@ -113,7 +103,7 @@
         />
       </div>
       <div class="certificates">
-        <div class="label-L">Certificates Links</div>
+        <div class="label-L">{{ text['about']['certificateLeading'] }}</div>
         <BaseAttachment
           :isTrailing="false"
           :leadingIcon="'link'"
@@ -151,7 +141,7 @@
         />
       </div>
       <div class="other">
-        <div class="label-L">Other Links</div>
+        <div class="label-L">{{ text['about']['otherLeading'] }}</div>
         <BaseAttachment
           :isTrailing="false"
           :leadingIcon="'link'"
@@ -170,10 +160,24 @@ import BaseLine from "@/components/UI/BaseLine.vue";
 export default {
   name: "AboutMe",
   components: { BaseButton, KeyValueComp, BaseAttachment, BaseLine },
+  data() {
+    return {
+      lang: null,
+      text: null
+    }
+  },
   methods: {
     openLink(link) {
       window.open(link, "_blank");
     },
+  },
+  beforeMount() {
+    if (this.$cookies.get("lang")) {
+      this.lang = this.$cookies.get("lang");
+    } else {
+      this.lang = "en";
+    }
+    this.text = require(`@/assets/langs/${this.lang}.json`);
   },
   mounted() {
     window.scrollTo(0, 0);

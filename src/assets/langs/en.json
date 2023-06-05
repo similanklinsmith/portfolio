@@ -1,0 +1,109 @@
+{
+    "navigators": {
+        "home": "Home",
+        "about": "About"
+    },
+    "home": {
+        "welcome": "Welcome to",
+        "I": "I'm ",
+        "Deep": "Deep",
+        "NiceToMeet": "nice to meet you here.",
+        "headerContent": "This page contains my personal works and experiences from both university and firm since 2019s - 2023s.",
+        "lookingMore": "Looking for more",
+        "headerExp": "MY Working Experiences",
+        "subheaderExp": "Concluding the internship programme of university and part-time job",
+        "expHeading1": "INTERNSHIP",
+        "expsubheading1": "Jan - Apr 2022",
+        "expContent1": "Being internship at Accenture Thailand as Front-end Developer",
+        "expHeading2": "PART-TIME",
+        "expsubheading2": "Jun - Jul 2022",
+        "expContent2": "Being Part-time at Accenture Thailand as Front-end Developer",
+        "expHeading3": "PART-TIME",
+        "expsubheading3": "Jan - May 2023",
+        "expContent3": "Being Part-time at INNOVASIVE CO., LTD. as UX/UI Designer",
+        "headerWork": "MY Works",
+        "subheaderWork": "Concluding the personal works and senior project, since 2019s - 2023s",
+        "seeMore": "see more",
+        "workSubheading1": "Senior Project • Front-end Code",
+        "workHeading1": "Appointment Scheduling System for KMUTT secretaries",
+        "workSubheading2": "Senior Project • Figma",
+        "workHeading2": "Appointment Scheduling System for KMUTT secretaries",
+        "workSubheading3": "Personal Work • Figma",
+        "workHeading3": "Redesign Twitter Mobile",
+        "workSubheading4": "Mini Project • Front-end Code",
+        "workHeading4": "SPA Mini Project",
+        "workSubheading5": "Personal Work • Figma",
+        "workHeading5": "Create MY Portfolio",
+        "headerAct": "MY University Acts",
+        "subheaderAct": "Concluding the activities in university from 2019s - 2023s",
+        "actHeading1": "What had I done for 2019?",
+        "actContent1": [
+            "Being responsible for the part of UX/UI designer and Front-end Developer of mini-project in Web Technology (INT102)",
+            "Designing my own website by using Figma in User Experience Design (INT104)"
+        ],
+        "actHeading2": "What had I done for 2020?",
+        "actContent2": [
+            "Being resposible for designing infographics of SIT faculty",
+            "Receiving a scholarship of Ajinomoto Talent Scholarship (ATS)",
+            "Participating in the part of designing infographics for activity of the first year students -- PRE-IT#26 Starter Pack"
+        ],
+        "actHeading3": "What had I done for 2021?",
+        "actContent3": [
+            "Being responsible for the part of UX/UI designer and Front-end Developer of Integrated project I (INT221)",
+            "Participating in the part of designing infographics for activity of the first year students -- IT#27 Starter Pack",
+            "Being responsible for the part of UX/UI designer and Frontend Developer of Integrated project II (INT222)",
+            "Participating in the part of UX/UI designer and Graphic Design in website for students of SIT ITCHEATSHEET"
+        ],
+        "actHeading4": "What had I done for 2022?",
+        "actContent4": [
+            "Being responsible for the part of UX/UI designer and Front-end Developer of Senior Project",
+            "Being internship at Accenture Thailand as Front-end Developer",
+            "Being part-time at Accenture Thailand as Front-end Developer",
+            "The representatives of a former internship student at Accenture Thailand to narrate the experience at the SEA Accenture online conference with the SEA internship student of Accenture"
+        ],
+        "actHeading5": "What had I done for 2023?",
+        "actContent5": [
+            "Being part-time at INNOVASIVE CO., LTD. as UX/UI designer"
+        ],
+        "headerSkill": "MY Skills",
+        "subheaderSkill": "Skills that I have learned and practiced",
+        "skillIcon1": "fa-code",
+        "skillLeading1": "Front-end",
+        "skillValue1": "Vue.js, Flutter & Dart, HTML, CSS, JavaScript",
+        "skillIcon2": "fa-palette",
+        "skillLeading2": "Design",
+        "skillValue2": "Figma, Adobe Photoshop, Adobe Illustrator",
+        "skillIcon3": "fa-language",
+        "skillLeading3": "Language & Communicationd",
+        "skillValue3": "Thai, English, Italian",
+        "skillIcon4": "fa-ellipsis-vertical",
+        "skillLeading4": "Additionals Skills",
+        "skillValue4": "MySQL, React.js, JAVA"
+    },
+    "about": {
+        "name": "Similan Klinsmith",
+        "aboutLeading": "About ME",
+        "aboutContent": "“ Presently, I am fourth-year student which I will have graduated in in May, 2023, in faculty of SIT (School of Information Technology) at KMUTT(King Mongkut’s University of Technology Thonburi) who is willing to acquire new knowledge and improve myself all the time. I am seeking for this position of your organization to utilize my skills in maximum. Furthermore, it would be a great opportunity to be a part with a professional team. ”",
+        "personalLeading": "Personal Information",
+        "emailLeading": "Email",
+        "phoneLeading": "Phone Number",
+        "locationLeading": "Location",
+        "locationValue": "Bangkok, Thailand",
+        "educationLeading": "Education",
+        "graduationLeading": "Graduation",
+        "graduationValue": "King Mongkut’s University of Technology Thonburi (KMUTT) (Unofficially)",
+        "GPAXLeading": "GPAX",
+        "GPAXValue": "3.62 (1/2563 - 1/2565)",
+        "resumeLeading": "Resume",
+        "certificateLeading": "Certificates Links",
+        "otherLeading": "Other Links"
+    },
+    "footer": {
+        "contact": "Contact",
+        "email": "Email",
+        "tel": "Tel",
+        "menu": "Menu",
+        "home": "Home",
+        "about": "About"
+    }
+}

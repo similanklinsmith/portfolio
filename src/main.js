@@ -14,4 +14,5 @@ import { faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguag
 library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink);
 import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(router).use(MotionPlugin).use(Vue3Lottie).mount("#app");
+import VueCookies from 'vue-cookies'
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(VueCookies).use(router).use(MotionPlugin).use(Vue3Lottie).mount("#app");

@@ -1,0 +1,109 @@
+{
+    "navigators": {
+        "home": "หน้าหลัก",
+        "about": "เกี่ยวกับฉัน"
+    },
+    "home": {
+        "welcome": "ยินดีต้อนรับสู่",
+        "I": "ฉันชื่อ ",
+        "Deep": "ดีพ",
+        "NiceToMeet": "ยินดีที่ได้พบที่นี่",
+        "headerContent": "หน้าเพจนี้จะรวบรวมผลงานและประสบการณ์ทั้งส่วนตัว ตลอดการศึกษาที่มหาวิทยาลัย และบริษัท ตั้งแต่ 2019 - 2023",
+        "lookingMore": "ดูเพิ่มเติม",
+        "headerExp": "ประสบการณ์การทำงานของฉัน",
+        "subheaderExp": "รวบรวมประสบการณ์ทั้งการเป็นนักศึกษาฝึกงานและการทำงานพาร์ตไทม์",
+        "expHeading1": "นักศึกษาฝึกงาน",
+        "expsubheading1": "ม.ค. - เม.ย. 2022",
+        "expContent1": "เป็นนักศึกษาฝึกงานที่ Accenture Thailand ในตำแหน่ง Front-end Developer",
+        "expHeading2": "พนักงานพาร์ตไทม์",
+        "expsubheading2": "มิ.ย. - ก.ค. 2022",
+        "expContent2": "เป็นพนักงานพาร์ตไทม์ที่ Accenture Thailand ในตำแหน่ง Front-end Developer",
+        "expHeading3": "พนักงานพาร์ตไทม์",
+        "expsubheading3": "ม.ค. - พ.ค. 2023",
+        "expContent3": "เป็นพนักงานพาร์ตไทม์ที่ INNOVASIVE CO., LTD. ในตำแหน่ง UX/UI Designer",
+        "headerWork": "ผลงานของฉัน",
+        "subheaderWork": "รวบรวมผลงานทั้งส่วนตัว และโปรเจคของวิชาในมหาวิทยาลัย ตั้งแต่ 2019 - 2023",
+        "seeMore": "ดูเพิ่มเติม",
+        "workSubheading1": "Senior Project • Front-end Code",
+        "workHeading1": "ระบบจัดการเวลานัดหมายสำหรับเลขานุการมจธ.",
+        "workSubheading2": "Senior Project • Figma",
+        "workHeading2": "ระบบจัดการเวลานัดหมายสำหรับเลขานุการมจธ.",
+        "workSubheading3": "Personal Work • Figma",
+        "workHeading3": "ออกแบบแอปทวิตเตอร์สำหรับโทรศัพท์ใหม่",
+        "workSubheading4": "Mini Project • Front-end Code",
+        "workHeading4": "SPA โปรเจคย่อย",
+        "workSubheading5": "Personal Work • Figma",
+        "workHeading5": "สร้าง MY Portfolio",
+        "headerAct": "กิจกรรมระหว่างการศึกษาที่มหาวิทยาลัย",
+        "subheaderAct": "รวบรวมกิจกรรมในระหว่างการศึกษาที่มหาวิทยาลัย ตั้งแต่ 2019 - 2023",
+        "actHeading1": "ฉันทำอะไรบ้างในปี 2019?",
+        "actContent1": [
+            "รับผิดชอบในส่วนของ UX/UI designer และ Front-end Developer ของ mini-project ในรายวิชา Web Technology (INT102)",
+            "ออกแบบเว็บไซต์ส่วนตัวโดยใช้ Figma ในรายวิชา User Experience Design (INT104)"
+        ],
+        "actHeading2": "ฉันทำอะไรบ้างในปี 2020?",
+        "actContent2": [
+            "รับผิดชอบในส่วนของการออกแบบอินโฟกราฟิกของคณะที่ตนศึกษาอยู่ (SIT: School of Information and Technology)",
+            "ได้รับทุนการศึกษาจากมูลนิธิอายิโนะโมะโต๊ะเพื่อผู้เรียนดีมีศักยภาพเป็นเลิศ (ATS: Ajinomoto Talent Scholarship)",
+            "มีส่วนร่วมในการออกแบบอินโฟกราฟิกของกิจกรรมที่จัดขึ้นเพื่อนักศึกษาชั้นปีที่ที่ 1 ของคณะ (PRE-IT#26 Starter Pack)"
+        ],
+        "actHeading3": "ฉันทำอะไรบ้างในปี 2021?",
+        "actContent3": [
+            "รับผิดชอบในส่วนของ UX/UI designer และ Front-end Developer ของ Integrated Project I (INT221)",
+            "มีส่วนร่วมในการออกแบบอินโฟกราฟิกของกิจกรรมที่จัดขึ้นเพื่อนักศึกษาชั้นปีที่ที่ 1 ของคณะ (PRE-IT#27 Starter Pack)",
+            "รับผิดชอบในส่วนของ UX/UI designer และ Front-end Developer ของ Integrated Project II (INT222)",
+            "มีส่วนร่วมรับผิดชอบในส่วนของ UX/UI designer และ Graphic Design ในการออกแบบเว็บไซต์สำหรับนักศึกษาในคณะ (SIT ITCHEATSHEET)"
+        ],
+        "actHeading4": "ฉันทำอะไรบ้างในปี 2022?",
+        "actContent4": [
+            "รับผิดชอบในส่วนของ UX/UI designer และ Front-end Dveloper ของ Senior Project",
+            "เป็นนักศึกษาฝึกงานที่ Accenture Thailand ในตำแหน่ง Front-end Developer",
+            "เป็นพนักงานพาร์ตไทม์ที่ Accenture Thailand ในตำแหน่ง Front-end Developer",
+            "เป็นตัวแทนของนักศึกษาฝึกงานเก่าของ Accenture Thailand ทำหน้าที่เล่าประสบการณ์การทำงานในงาน SEA Accenture online conference กับ นักศึกษาฝึกงานคนอื่นจากภูมิภาคเอเซียตะวันออกเฉียงใต้"
+        ],
+        "actHeading5": "ฉันทำอะไรบ้างในปี 2023?",
+        "actContent5": [
+            "เป็นพนักงานพาร์ตไทม์ที่ INNOVASIVE CO., LTD. ในตำแหน่ง UX/UI designer"
+        ],
+        "headerSkill": "ทักษะของฉัน",
+        "subheaderSkill": "ทักษะที่ได้เรียนรู้และฝึกฝน",
+        "skillIcon1": "fa-code",
+        "skillLeading1": "Front-end",
+        "skillValue1": "Vue.js, Flutter & Dart, HTML, CSS, JavaScript",
+        "skillIcon2": "fa-palette",
+        "skillLeading2": "การออกแบบ",
+        "skillValue2": "Figma, Adobe Photoshop, Adobe Illustrator",
+        "skillIcon3": "fa-language",
+        "skillLeading3": "ภาษาและการสื่อสาร",
+        "skillValue3": "ไทย อังกฤษ และอิตาลี",
+        "skillIcon4": "fa-ellipsis-vertical",
+        "skillLeading4": "ทักษะเพิ่มเติม",
+        "skillValue4": "MySQL, React.js, JAVA"
+    },
+    "about": {
+        "name": "สิมิลัน กลิ่นสมิทธิ์",
+        "aboutLeading": "เกี่ยวกับฉัน",
+        "aboutContent": "“ ปัจจุบันฉันเป็นนักศึกษาชั้นปีที่ 4 ที่จะสำเร็จการศึกษาในเดือนพฤษภาคม 2566 คณะเทคโนโลยีสารสนเทศ มจธ.(มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี) ที่พร้อมรับความรู้ใหม่ ๆ และพัฒนาตนเองตลอดเวลา ฉันกำลังมองหาตำแหน่งงานนี้ในองค์กรของคุณเพื่อใช้ทักษะของฉันให้เกิดประโยชน์สูงสุด นอกจากนี้ยังเป็นโอกาสอันดีที่จะได้ร่วมเป็นส่วนหนึ่งกับทีมงานมืออาชีพ ”",
+        "personalLeading": "ข้อมูลส่วนตัว",
+        "emailLeading": "อีเมล",
+        "phoneLeading": "เบอร์โทรศัพท์",
+        "locationLeading": "ที่อยู่",
+        "locationValue": "กรุงเทพมหานคร, ประเทศไทย",
+        "educationLeading": "การศึกษา",
+        "graduationLeading": "จบการศึกษา",
+        "graduationValue": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี (มจธ.) (อย่างไม่เป็นทางการ)",
+        "GPAXLeading": "GPAX",
+        "GPAXValue": "3.62 (1/2563 - 1/2565)",
+        "resumeLeading": "เรซูเม่",
+        "certificateLeading": "ลิงก์เกียรติบัตรใบรับรอง",
+        "otherLeading": "ลิงก์อื่น ๆ"
+    },
+    "footer": {
+        "contact": "ติดต่อ",
+        "email": "อีเมล",
+        "tel": "โทร",
+        "menu": "เมนู",
+        "home": "หน้าหลัก",
+        "about": "เกี่ยวกับฉัน"
+    }
+}

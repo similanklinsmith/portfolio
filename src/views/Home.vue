@@ -12,21 +12,23 @@
     <div class="profile">
       <div class="leading-section">
         <div class="leading">
-          <div class="sub-header title-M">Welcome to</div>
+          <div class="sub-header title-M">{{ text["home"]["welcome"] }}</div>
           <div class="header heading-L">MY Portfolio<span>.</span></div>
         </div>
         <div class="informations body-L">
           <div class="first-line">
-            I’m <span>Deep</span>, nice to meet you here.
+            {{ text["home"]["I"] }}<span>{{ text["home"]["Deep"] }}</span
+            >, {{ text["home"]["NiceToMeet"] }}
           </div>
           <div class="second-line">
-            This page contains my personal works and experiences from both
-            university and firm since 2019s - 2023s.
+            {{ text["home"]["headerContent"] }}
           </div>
         </div>
       </div>
       <div class="lower-section">
-        <div class="leading-text label-S">Looking for more</div>
+        <div class="leading-text label-S">
+          {{ text["home"]["lookingMore"] }}
+        </div>
         <BaseButton
           :icon="'only-icon'"
           :style="'gray'"
@@ -62,50 +64,50 @@
   </div>
   <div class="work-experience" v-motion-slide-visible-once-bottom>
     <HeadingComp
-      :heading="'MY Working Experiences'"
-      :subheading="'Concluding the internship programme of university and part-time job'"
+      :heading="text['home']['headerExp']"
+      :subheading="text['home']['subheaderExp']"
     />
     <div class="experiences">
       <WorkComp
         :emoji="'🖥️'"
-        :leading="'INTERNSHIP'"
-        :period="'Jan - April 2022'"
-        :content="'Being internship at Accenture Thailand as Front-end Developer'"
+        :leading="text['home']['expHeading1']"
+        :period="text['home']['expsubheading1']"
+        :content="text['home']['expContent1']"
       />
       <WorkComp
         :emoji="'🖥️'"
-        :leading="'PART-TIME'"
-        :period="'Jun - Jul 2022'"
-        :content="'Being Part-time at Accenture Thailand as Front-end Developer'"
+        :leading="text['home']['expHeading2']"
+        :period="text['home']['expsubheading2']"
+        :content="text['home']['expContent2']"
       />
       <WorkComp
         :emoji="'🎨'"
-        :leading="'PART-TIME'"
-        :period="'Jan - May 2023'"
-        :content="'Being Part-time at INNOVASIVE CO., LTD. as UX/UI Designer'"
+        :leading="text['home']['expHeading3']"
+        :period="text['home']['expsubheading3']"
+        :content="text['home']['expContent3']"
       />
     </div>
   </div>
   <div class="my-works" v-motion-slide-visible-once-bottom>
     <HeadingComp
-      :heading="'MY Works'"
-      :subheading="'Concluding the personal works and senior project, since 2019s - 2023s'"
+      :heading="text['home']['headerWork']"
+      :subheading="text['home']['subheaderWork']"
     />
     <div class="works">
       <div class="first-row">
         <div class="work-1">
           <div class="leading">
             <div class="leading-text">
-              <div class="title-M">Senior Project • Front-end Code</div>
+              <div class="title-M">{{ text["home"]["workSubheading1"] }}</div>
               <div class="title-L">
-                Appointment Scheduling System for KMUTT secretaries
+                {{ text["home"]["workHeading1"] }}
               </div>
             </div>
             <BaseButton
               :icon="'no-icon'"
               :style="'white'"
               :size="'base'"
-              :buttonText="'see more'"
+              :buttonText="text['home']['seeMore']"
               @onClick="
                 openLink('https://github.com/similanklinsmith/senior_project')
               "
@@ -133,16 +135,16 @@
         <div class="work-2">
           <div class="leading">
             <div class="leading-text">
-              <div class="title-M">Senior Project • Figma</div>
+              <div class="title-M">{{ text["home"]["workSubheading2"] }}</div>
               <div class="title-L">
-                Appointment Scheduling System for KMUTT secretaries
+                {{ text["home"]["workHeading2"] }}
               </div>
             </div>
             <BaseButton
               :icon="'no-icon'"
               :style="'white'"
               :size="'base'"
-              :buttonText="'see more'"
+              :buttonText="text['home']['seeMore']"
               @onClick="
                 openLink(
                   'https://www.figma.com/file/qBd8vG5H8XLJFVLzHW8HqP/INT365?type=design&node-id=11%3A91&t=WmoGgoO2SCvaMYFn-1'
@@ -172,14 +174,14 @@
         <div class="work-3">
           <div class="leading">
             <div class="leading-text">
-              <div class="title-M">Personal Work • Figma</div>
-              <div class="title-L">Redesign Twitter Mobile</div>
+              <div class="title-M">{{ text["home"]["workSubheading3"] }}</div>
+              <div class="title-L">{{ text["home"]["workHeading3"] }}</div>
             </div>
             <BaseButton
               :icon="'no-icon'"
               :style="'white'"
               :size="'base'"
-              :buttonText="'see more'"
+              :buttonText="text['home']['seeMore']"
               @onClick="
                 openLink(
                   'https://www.figma.com/file/SSOBohQWSs6E2cunUqVbTq/redesign-twitter?type=design&node-id=903%3A6&t=mFl0fmoJZJmtBRbb-1'
@@ -201,14 +203,14 @@
         <div class="work-4">
           <div class="leading">
             <div class="leading-text">
-              <div class="title-M">Mini Project • Front-end Code</div>
-              <div class="title-L">SPA Mini Project</div>
+              <div class="title-M">{{ text["home"]["workSubheading4"] }}</div>
+              <div class="title-L">{{ text["home"]["workHeading4"] }}</div>
             </div>
             <BaseButton
               :icon="'no-icon'"
               :style="'white'"
               :size="'base'"
-              :buttonText="'see more'"
+              :buttonText="text['home']['seeMore']"
               @onClick="
                 openLink('https://github.com/similanklinsmith/INT222_FrontEnd')
               "
@@ -228,14 +230,14 @@
         <div class="work-5">
           <div class="leading">
             <div class="leading-text">
-              <div class="title-M">Personal Work • Figma</div>
-              <div class="title-L">Create MY Portfolio</div>
+              <div class="title-M">{{ text["home"]["workSubheading5"] }}</div>
+              <div class="title-L">{{ text["home"]["workHeading5"] }}</div>
             </div>
             <BaseButton
               :icon="'no-icon'"
               :style="'white'"
               :size="'base'"
-              :buttonText="'see more'"
+              :buttonText="text['home']['seeMore']"
               @onClick="
                 openLink(
                   'https://www.figma.com/file/riICj2v64aguQHNAXnaqr5/PORTFOLIO?type=design&node-id=309%3A1755&t=C9R1I4XNanBdy37N-1'
@@ -259,8 +261,8 @@
   </div>
   <div class="university-acts" v-motion-slide-visible-once-bottom>
     <HeadingComp
-      :heading="'MY University Acts'"
-      :subheading="'Concluding the activities in university from 2019s - 2023s'"
+      :heading="text['home']['headerAct']"
+      :subheading="text['home']['subheaderAct']"
     />
     <div class="act-container">
       <div v-for="(act, index) in activities" :key="act.id">
@@ -281,8 +283,8 @@
   </div>
   <div class="my-skills" v-motion-slide-visible-once-bottom>
     <HeadingComp
-      :heading="'MY Skills'"
-      :subheading="'Skills that I have learned and practiced'"
+      :heading="text['home']['headerSkill']"
+      :subheading="text['home']['subheaderSkill']"
     />
     <div class="container-skill">
       <SkillComp
@@ -315,83 +317,10 @@ export default {
   },
   data() {
     return {
-      activities: [
-        {
-          id: 1,
-          isSelected: false,
-          leading: "What had I done for 2019?",
-          content: [
-            "Being responsible for the part of UX/UI designer and Front-end Developer of mini-project in Web Technology (INT102)",
-            "Desiging my own website by using Figma in User Experience Design (INT104)",
-          ],
-        },
-        {
-          id: 2,
-          isSelected: false,
-          leading: "What had I done for 2020?",
-          content: [
-            "Being resposible for designing infographics of SIT faculty",
-            "Receiving a scholarship of Ajinomoto Talent Scholarship (ATS)",
-            "Participating in the part of designing infographics for activity of the first year students -- PRE-IT#26 Starter Pack",
-          ],
-        },
-        {
-          id: 3,
-          isSelected: false,
-          leading: "What had I done for 2021?",
-          content: [
-            "Being responsible for the part of UX/UI designer and Front-end Developer of Integrated project I (INT221)",
-            "Participating in the part of designing infographics for activity of the first year students -- IT#27 Starter Pack",
-            "Being responsible for the part of UX/UI designer and Frontend Developer of Integrated project II (INT222)",
-            "Participating in the part of UX/UI designer and Graphic Design in website for students of SIT ITCHEATSHEET",
-          ],
-        },
-        {
-          id: 4,
-          isSelected: false,
-          leading: "What had I done for 2022?",
-          content: [
-            "Being responsible for the part of UX/UI designer and Front-end Developer of Senior Project",
-            "Being internship at Accenture Thailand as Front-end Developer",
-            "Being part-time at Accenture Thailand as Front-end Developer",
-            "The representatives of a former internship student at ACCENTURE Thailand to narrate the experience at the SEA ACCENTURE online conference with the SEA internship student of ACCENTURE",
-          ],
-        },
-        {
-          id: 5,
-          isSelected: false,
-          leading: "What had I done for 2023?",
-          content: [
-            "Being part-time at INNOVASIVE CO., LTD. as UX/UI designer",
-          ],
-        },
-      ],
-      skills: [
-        {
-          id: 1,
-          leading: "Front-end",
-          value: "Vue.js, Flutter & Dart, HTML, CSS, JavaScript",
-          icon: "fa-code",
-        },
-        {
-          id: 2,
-          leading: "Design",
-          value: "Figma, Adobe Photoshop, Adobe Illustrator",
-          icon: "fa-palette",
-        },
-        {
-          id: 3,
-          leading: "Language & Communicationd",
-          value: "Thai, English, Italian",
-          icon: "fa-language",
-        },
-        {
-          id: 4,
-          leading: "Additionals Skills",
-          value: "MySQL, React.js, JAVA",
-          icon: "fa-ellipsis-vertical",
-        },
-      ],
+      lang: null,
+      text: null,
+      activities: null,
+      skills: null,
     };
   },
   methods: {
@@ -406,6 +335,77 @@ export default {
         return '<span style="color:#7452FF">' + match + "</span>";
       });
     },
+    changeLanguage(lang) {
+      this.$cookies.set("lang", lang);
+      window.location.reload();
+      this.scrollToTop();
+    },
+  },
+  beforeMount() {
+    if (this.$cookies.get("lang")) {
+      this.lang = this.$cookies.get("lang");
+    } else {
+      this.lang = "en";
+    }
+    this.text = require(`@/assets/langs/${this.lang}.json`);
+    this.activities = [
+      {
+        id: 1,
+        isSelected: false,
+        leading: this.text["home"]["actHeading1"],
+        content: this.text["home"]["actContent1"],
+      },
+      {
+        id: 2,
+        isSelected: false,
+        leading: this.text["home"]["actHeading2"],
+        content: this.text["home"]["actContent2"],
+      },
+      {
+        id: 3,
+        isSelected: false,
+        leading: this.text["home"]["actHeading3"],
+        content: this.text["home"]["actContent3"],
+      },
+      {
+        id: 4,
+        isSelected: false,
+        leading: this.text["home"]["actHeading4"],
+        content: this.text["home"]["actContent4"],
+      },
+      {
+        id: 5,
+        isSelected: false,
+        leading: this.text["home"]["actHeading5"],
+        content: this.text["home"]["actContent5"],
+      },
+    ];
+    this.skills = [
+      {
+        id: 1,
+        leading: this.text["home"]["skillLeading1"],
+        value: this.text["home"]["skillValue1"],
+        icon: this.text["home"]["skillIcon1"],
+      },
+      {
+        id: 2,
+        leading: this.text["home"]["skillLeading2"],
+        value: this.text["home"]["skillValue2"],
+        icon: this.text["home"]["skillIcon2"],
+      },
+      {
+        id: 3,
+        leading: this.text["home"]["skillLeading3"],
+        value: this.text["home"]["skillValue3"],
+        icon: this.text["home"]["skillIcon3"],
+      },
+      {
+        id: 4,
+        leading: this.text["home"]["skillLeading4"],
+        value: this.text["home"]["skillValue4"],
+        icon: this.text["home"]["skillIcon4"],
+      },
+    ];
   },
   mounted() {
     window.scrollTo(0, 0);
