@@ -3,7 +3,7 @@
     <div class="image-profile">
       <client-only>
         <Vue3Lottie
-          animationLink="https://lottie.host/376f15af-e78d-41a2-b731-71e6e014ef38/2vt6ggf9RD.json"
+          animationLink="https://lottie.host/26895b0b-ef5e-483a-a3f5-f0f7d2cb5c80/yEmdEoA8hk.json"
           :speed="0.5"
           class="lottie"
         />
@@ -89,7 +89,6 @@
     </div>
   </div>
   <div class="my-works" v-motion-slide-visible-once-bottom>
-    Current height: {{ windowWidth }}
     <HeadingComp
       :heading="text['home']['headerWork']"
       :subheading="text['home']['subheaderWork']"
