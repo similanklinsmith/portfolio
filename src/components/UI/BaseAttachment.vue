@@ -4,7 +4,12 @@
       <div class="leading-icon">
         <font-awesome-icon :icon="`fa-solid fa-${leadingIcon}`" />
       </div>
-      <div class="content">{{ content }}</div>
+      <div
+        class="content"
+        :style="isActive == false ? { color: '#DBDBE7 !important' } : {}"
+      >
+        {{ content }}
+      </div>
     </div>
     <div class="trailing-icon" v-if="isTrailing">
       <font-awesome-icon icon="fa-solid fa-arrow-down" />
@@ -19,6 +24,10 @@ export default {
     isTrailing: Boolean,
     leadingIcon: String,
     content: String,
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
   },
   methods: {
     onClick() {
