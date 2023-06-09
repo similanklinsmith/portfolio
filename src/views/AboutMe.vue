@@ -259,6 +259,8 @@ export default {
   .leading-icon {
     width: 4.8rem;
     height: 4.8rem;
+    min-width: 4.8rem;
+    min-height: 4.8rem;
     border-radius: 50%;
     background-color: $primaryBG;
     color: $primaryMain;
@@ -386,6 +388,40 @@ export default {
     display: flex;
     flex-direction: column;
     row-gap: 1.6rem;
+  }
+}
+@media (max-width: 26.75em) {
+  .container {
+    padding: 0 1.8rem 9rem 1.8rem;
+    .col-1 {
+      .profile {
+        padding: 3.2rem 2.4rem;
+        align-items: flex-start;
+        .content {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1.6rem;
+          align-items: flex-start;
+        }
+      }
+      .about-me {
+        padding: 3.2rem 2.4rem;
+      }
+      .personal-information {
+        padding: 3.2rem 2.4rem;
+        .label-L {
+          color: $mainText;
+        }
+        .row-1 {
+          display: flex;
+          flex-direction: column;
+          row-gap: 3.2rem;
+        }
+      }
+      .education {
+        padding: 3.2rem 2.4rem;
+      }
+    }
   }
 }
 </style>
