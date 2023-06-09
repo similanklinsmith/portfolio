@@ -14,8 +14,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vueuse/motion": "^2.0.0-beta.12",
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-axios": "^3.5.2",
     "vue-cookies": "^1.8.3",
     "vue-router": "^4.2.2",
     "vue3-lottie": "^2.7.0"
@@ -28,6 +30,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "file-loader": "^6.2.0",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.2"
   },
