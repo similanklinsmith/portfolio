@@ -3,6 +3,8 @@ import { MotionPlugin } from '@vueuse/motion'
 import router from "./router";
 import App from "./App.vue";
 import "../public/general.scss";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 /* import font awesome icon component */
@@ -15,4 +17,4 @@ library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faC
 import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
 import VueCookies from 'vue-cookies'
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(VueCookies).use(router).use(MotionPlugin).use(Vue3Lottie).mount("#app");
+createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(VueAxios, axios).use(VueCookies).use(router).use(MotionPlugin).use(Vue3Lottie).mount("#app");
