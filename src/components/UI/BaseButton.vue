@@ -22,6 +22,7 @@
 export default {
   name: "BaseButton",
   props: ["size", "style", "icon", "buttonText"],
+    emits: ['onClick'],
   methods: {
     btnAction() {
         this.$emit('onClick');

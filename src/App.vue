@@ -275,4 +275,17 @@ export default {
     }
   }
 }
+@media (max-width: 64em) {
+  .nav-bar {
+    padding: 0 3.3rem;
+  }
+  .footer {
+    padding: 6.4rem 3.3rem;
+    .col-2 {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.4rem;
+    }
+  }
+}
 </style>

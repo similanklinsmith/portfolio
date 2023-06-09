@@ -35,4 +35,11 @@ export default {
     justify-content: center;
   }
 }
+@media (max-width: 64em) {
+  .skill {
+    flex-direction: column;
+    row-gap: 2.4rem;
+    width: 24.5rem;
+  }
+}
 </style>

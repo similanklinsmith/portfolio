@@ -380,4 +380,12 @@ export default {
     }
   }
 }
+@media (max-width: 64em) {
+  .container {
+    padding: 0 3.3rem 9rem 3.3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+  }
+}
 </style>

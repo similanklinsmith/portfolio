@@ -89,6 +89,7 @@
     </div>
   </div>
   <div class="my-works" v-motion-slide-visible-once-bottom>
+    Current height: {{ windowWidth }}
     <HeadingComp
       :heading="text['home']['headerWork']"
       :subheading="text['home']['subheaderWork']"
@@ -132,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div class="work-2">
+        <div class="work-2" v-if="windowWidth > 1024">
           <div class="leading">
             <div class="leading-text">
               <div class="title-M">{{ text["home"]["workSubheading2"] }}</div>
@@ -171,6 +172,43 @@
         </div>
       </div>
       <div class="second-row">
+        <div class="work-2" v-if="windowWidth <= 1024">
+          <div class="leading">
+            <div class="leading-text">
+              <div class="title-M">{{ text["home"]["workSubheading2"] }}</div>
+              <div class="title-L">
+                {{ text["home"]["workHeading2"] }}
+              </div>
+            </div>
+            <BaseButton
+              :icon="'no-icon'"
+              :style="'white'"
+              :size="'base'"
+              :buttonText="text['home']['seeMore']"
+              @onClick="
+                openLink(
+                  'https://www.figma.com/file/qBd8vG5H8XLJFVLzHW8HqP/INT365?type=design&node-id=11%3A91&t=WmoGgoO2SCvaMYFn-1'
+                )
+              "
+            />
+          </div>
+          <div class="image-flex">
+            <div class="image-container">
+              <div class="image-1">
+                <img
+                  src="@/assets/images/senior_project_desktop.png"
+                  alt="desktop senior project"
+                />
+              </div>
+              <div class="image-2">
+                <img
+                  src="@/assets/images/senior_project_mobile.png"
+                  alt="desktop senior project"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="work-3">
           <div class="leading">
             <div class="leading-text">
@@ -287,13 +325,15 @@
       :subheading="text['home']['subheaderSkill']"
     />
     <div class="container-skill">
-      <SkillComp
-        v-for="skill in skills"
-        :key="skill.id"
-        :icon="skill.icon"
-        :leading="skill.leading"
-        :value="skill.value"
-      />
+      <div class="scroll">
+        <SkillComp
+          v-for="skill in skills"
+          :key="skill.id"
+          :icon="skill.icon"
+          :leading="skill.leading"
+          :value="skill.value"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -321,9 +361,13 @@ export default {
       text: null,
       activities: null,
       skills: null,
+      windowWidth: window.innerWidth,
     };
   },
   methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    },
     toggle(index) {
       this.activities[index].isSelected = !this.activities[index].isSelected;
     },
@@ -409,7 +453,13 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0);
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
   },
+  // beforeDestroy() {
+  //   window.removeEventListener("resize", this.onResize);
+  // },
 };
 </script>
 
@@ -767,9 +817,147 @@ export default {
   row-gap: 3.2rem;
   background-color: $light2;
   .container-skill {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.6rem;
+    .scroll {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+    }
+  }
+}
+@media (max-width: 64em) {
+  .header-section {
+    padding: 0 3.3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    width: 100%;
+    .profile {
+      height: 35.2rem;
+    }
+  }
+  .work-experience {
+    padding: 4.8rem 3.3rem;
+  }
+  .my-works {
+    padding: 0 3.3rem;
+    .works {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.6rem;
+      .first-row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+        height: fit-content;
+        .work-1 {
+          height: 41.6rem;
+          .leading {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.6rem;
+          }
+        }
+      }
+      .second-row {
+        display: grid;
+        gap: 1.6rem;
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        .work-2,
+        .work-3,
+        .work-4,
+        .work-5 {
+          height: 41.6rem;
+          border-radius: 1.2rem;
+          padding: 3.2rem;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          row-gap: 2.4rem;
+          width: 100%;
+          .leading {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.6rem;
+            .leading-text {
+              display: flex;
+              row-gap: 1.6rem;
+              flex-direction: column;
+              .title-M {
+                color: $light2;
+              }
+              .title-L {
+                color: $light4;
+              }
+            }
+          }
+        }
+        .work-2 {
+          background-color: $secondaryMain;
+          .leading {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.6rem;
+            .leading-text {
+              display: flex;
+              row-gap: 1.6rem;
+              flex-direction: column;
+              .title-M {
+                color: $light4;
+              }
+              .title-L {
+                color: $mainText;
+              }
+            }
+          }
+          .image-flex {
+            position: relative;
+            transition: 0.3s all ease-in-out;
+            .image-container {
+              left: 0;
+              .image-1 {
+                width: 40.8rem;
+                height: 27.2rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .image-2 {
+                width: 11.6rem;
+                height: 22.9rem;
+                margin-top: 2rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          &:hover .image-flex {
+            transform: translateY(1rem);
+            opacity: 0.85;
+          }
+        }
+      }
+    }
+  }
+  .university-acts {
+    padding: 0 3.3rem;
+  }
+  .my-skills {
+    padding: 4.8rem 3.3rem 7.2rem 3.3rem;
+    overflow: hidden;
+    .container-skill {
+      display: block;
+      overflow: scroll;
+      .scroll {
+        display: flex;
+        column-gap: 1.6rem;
+        width: fit-content;
+      }
+    }
   }
 }
 </style>
