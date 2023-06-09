@@ -31,6 +31,9 @@ export default {
   padding: 3.2rem;
   row-gap: 1.6rem;
   width: 100%;
+  &:hover .leading .icon {
+    border-radius: 25%;
+  }
   .leading {
     display: flex;
     flex-direction: column;
@@ -44,6 +47,7 @@ export default {
       height: 4.8rem;
       border-radius: 50%;
       background-color: $primaryBG;
+      transition: 0.3s all ease-in-out;
     }
     .leading-text {
       display: flex;
