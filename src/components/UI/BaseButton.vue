@@ -22,13 +22,13 @@
 export default {
   name: "BaseButton",
   props: ["size", "style", "icon", "buttonText"],
-    emits: ['onClick'],
+  emits: ["onClick"],
   methods: {
     btnAction() {
-        this.$emit('onClick');
-    }
-  }
-}
+      this.$emit("onClick");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -85,6 +85,9 @@ export default {
   &:hover {
     background-color: $light0;
   }
+}
+.no-bg {
+  background-color: none;
 }
 .no-icon {
   border-radius: 5rem;

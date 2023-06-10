@@ -889,6 +889,16 @@ export default {
             }
           }
         }
+        .work-3,
+        .work-5 {
+          .image-flex {
+            transform: translateX(0rem);
+          }
+          &:hover .image-flex {
+            transform: translateX(0) translateY(1rem);
+            opacity: 0.85;
+          }
+        }
         .work-2 {
           background-color: $secondaryMain;
           .leading {
@@ -911,7 +921,7 @@ export default {
             position: relative;
             transition: 0.3s all ease-in-out;
             .image-container {
-              left: 0;
+              display: f;
               .image-1 {
                 width: 40.8rem;
                 height: 27.2rem;
@@ -950,6 +960,92 @@ export default {
       overflow: scroll;
       .scroll {
         display: flex;
+        column-gap: 1.6rem;
+        width: fit-content;
+      }
+    }
+  }
+}
+@media (max-width: 26.75em) {
+  .header-section {
+    padding: 0 1.8rem;
+    .image-profile {
+      min-width: 100%;
+    }
+    .profile {
+      padding: 3.2rem 2.4rem;
+    }
+  }
+  .work-experience {
+    padding: 4.8rem 1.8rem;
+    .experiences {
+      flex-direction: column;
+      row-gap: 1.6rem;
+    }
+  }
+  .my-works {
+    padding: 0 1.8rem;
+    .works {
+      .first-row {
+        .work-1 {
+          padding: 3.2rem 2.4rem;
+          .image-flex {
+            .image-container {
+              .image-1,
+              .image-2 {
+                width: 28.196rem;
+                height: 18.819rem;
+              }
+              .image-1 {
+                bottom: -2.4rem;
+              }
+            }
+          }
+        }
+      }
+      .second-row {
+        grid-template-columns: 1fr;
+        .work-2,
+        .work-3,
+        .work-4,
+        .work-5 {
+          padding: 3.2rem 2.4rem;
+        }
+        .work-2 {
+          .image-flex {
+            .image-container {
+              position: absolute;
+              display: flex;
+              column-gap: 1.6rem;
+              left: 0;
+              .image-1 {
+                width: 28.196rem;
+                height: 18.819rem;
+              }
+              .image-2 {
+                width: 9.6rem;
+                height: 19rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .university-acts {
+    padding: 0 1.8rem;
+    .act-container {
+      padding: 2.4rem;
+    }
+  }
+  .my-skills {
+    padding: 4.8rem 1.8rem 7.2rem 1.8rem;
+    .container-skill {
+      display: block;
+
+      .scroll {
+        display: flex;
+        flex-direction: column;
         column-gap: 1.6rem;
         width: fit-content;
       }

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <BaseNavigator />
+    <BaseNavigator @toggleNav='isToggled = true' />
+    <BaseMobileNav :isToggled="isToggled" @toggleCloseNav="isToggled = false" />
     <div class="content">
       <router-view v-slot="{ Component }">
         <transition name="route" appear>
@@ -81,6 +82,7 @@
 </template>
 
 <script>
+import BaseMobileNav from "@/components/UI/BaseMobileNav.vue";
 import BaseNavigator from "@/components/UI/BaseNavigator.vue";
 import BaseTab from "@/components/UI/BaseTab.vue";
 import BaseButton from "@/components/UI/BaseButton.vue";
@@ -90,11 +92,13 @@ export default {
     BaseNavigator,
     BaseTab,
     BaseButton,
+    BaseMobileNav,
   },
   data() {
     return {
       lang: null,
       text: null,
+      isToggled: false,
     };
   },
   methods: {

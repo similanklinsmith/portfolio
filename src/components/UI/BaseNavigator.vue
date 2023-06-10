@@ -27,8 +27,8 @@
         >
       </div>
     </div>
-    <div class="burger-bar body-L">
-        <font-awesome-icon icon="fa-solid fa-bars-staggered" />
+    <div class="burger-bar body-L" @click="toggleNav">
+      <font-awesome-icon icon="fa-solid fa-bars-staggered" />
     </div>
   </div>
 </template>
@@ -52,6 +52,9 @@ export default {
       window.location.reload();
       this.scrollToTop();
     },
+    toggleNav() {
+      this.$emit('toggleNav')
+    }
   },
   beforeMount() {
     if (this.$cookies.get("lang")) {
@@ -125,7 +128,7 @@ export default {
   }
 }
 .burger-bar {
-    display: none;
+  display: none;
 }
 @media (max-width: 64em) {
   .nav-bar {
