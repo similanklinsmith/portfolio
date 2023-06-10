@@ -53,6 +53,7 @@ export default {
       display: flex;
       flex-direction: column;
       row-gap: 0.2rem;
+      align-items: center;
       .label-L {
         color: $primaryMain;
       }
