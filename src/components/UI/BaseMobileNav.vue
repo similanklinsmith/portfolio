@@ -50,7 +50,7 @@
           <div class="label-S">Language</div>
           <BaseTab
             @onClick="changeLanguage('th')"
-            :tabText="'TH | Thai'"
+            :tabText="`TH | ${text['navigators']['thai']}`"
             :displayStyle="'button'"
             :style="
               lang == 'th'
@@ -66,7 +66,7 @@
           </BaseTab>
           <BaseTab
             @onClick="changeLanguage('en')"
-            :tabText="'EN | English'"
+            :tabText="`EN | ${text['navigators']['english']}`"
             :displayStyle="'button'"
             :style="
               lang == 'en'
@@ -78,7 +78,7 @@
                 : {}
             "
           >
-            <template v-slot:icon> en </template>
+            <template v-slot:icon> 🇬🇧 </template>
           </BaseTab>
         </div>
       </div>

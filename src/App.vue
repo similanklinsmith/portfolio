@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SplashScreen />
     <BaseNavigator @toggleNav='isToggled = true' />
     <BaseMobileNav :isToggled="isToggled" @toggleCloseNav="isToggled = false" />
     <div class="content">
@@ -82,6 +83,7 @@
 </template>
 
 <script>
+import SplashScreen from "@/views/SplashScreen.vue";
 import BaseMobileNav from "@/components/UI/BaseMobileNav.vue";
 import BaseNavigator from "@/components/UI/BaseNavigator.vue";
 import BaseTab from "@/components/UI/BaseTab.vue";
@@ -89,6 +91,7 @@ import BaseButton from "@/components/UI/BaseButton.vue";
 export default {
   name: "App",
   components: {
+    SplashScreen,
     BaseNavigator,
     BaseTab,
     BaseButton,

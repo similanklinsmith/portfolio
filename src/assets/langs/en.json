@@ -1,7 +1,9 @@
 {
     "navigators": {
         "home": "Home",
-        "about": "About"
+        "about": "About",
+        "thai": "Thai",
+        "english": "English"
     },
     "home": {
         "welcome": "Welcome to",
@@ -105,5 +107,8 @@
         "menu": "Menu",
         "home": "Home",
         "about": "About"
+    },
+    "splash": {
+        "loading": "Loading..."
     }
 }
