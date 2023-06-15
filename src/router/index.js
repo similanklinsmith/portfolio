@@ -15,8 +15,12 @@ const routes = [
     name: "work",
     component: () => import("@/views/AllWork.vue"),
   },
+  {
+    path: "/:catchAll(.*)*",
+    name: "NotFound",
+    component: () => import("@/views/exception/NotFound.vue"),
+  },
 ];
-
 
 const router = createRouter({
   history: createWebHistory(),

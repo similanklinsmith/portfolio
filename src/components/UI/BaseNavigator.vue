@@ -53,7 +53,6 @@ export default {
     changeLanguage(lang) {
       this.$cookies.set("lang", lang);
       window.location.reload();
-      this.scrollToTop();
     },
     toggleNav() {
       this.$emit('toggleNav')
