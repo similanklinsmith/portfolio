@@ -196,10 +196,6 @@ export default {
 @media (max-width: 64em) {
   .container {
     padding: 0 3.3rem 9rem 3.3rem;
-  }
-}
-@media (max-width: 48em) {
-  .container {
     .works {
       grid-template-columns: repeat(2, 1fr);
       .not-found {
@@ -208,6 +204,16 @@ export default {
     }
   }
 }
+/* @media (max-width: 48em) {
+  .container {
+    .works {
+      grid-template-columns: repeat(2, 1fr);
+      .not-found {
+        grid-column: span 2;
+      }
+    }
+  }
+} */
 @media (max-width: 26.75em) {
   .container {
     padding: 0 1.8rem 9rem 1.8rem;
