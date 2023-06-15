@@ -45,6 +45,17 @@
               </template>
             </BaseTab>
           </router-link>
+          <router-link to="/all-work" aria-label="all-work">
+            <BaseTab
+              @onClick="toggleCloseNav"
+              :tabText="text['navigators']['work']"
+              :displayStyle="'button'"
+            >
+              <template v-slot:icon>
+                <font-awesome-icon icon="fa-solid fa-briefcase" />
+              </template>
+            </BaseTab>
+          </router-link>
         </div>
         <div class="language">
           <div class="label-S">Language</div>

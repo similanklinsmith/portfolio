@@ -220,7 +220,6 @@ export default {
       window.open(link, "_blank");
     },
     downloadWithAxios(url, title) {
-      console.log(url);
       axios
         .get(url.default, {
           responseType: "blob",

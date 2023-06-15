@@ -11,9 +11,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 /* import specific icons */
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink, faBarsStaggered, faXmark, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink, faBarsStaggered, faXmark, faStar, faBriefcase, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 /* add icons to the library */
-library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink, faBarsStaggered, faXmark, faStar);
+library.add(faLinkedin, faGithub, faEnvelope, faArrowRight, faMinus, faPlus, faCode, faPalette, faLanguage, faEllipsisVertical, faMobile, faHouse, faScroll, faFileLines, faArrowDown, faLink, faBarsStaggered, faXmark, faStar, faBriefcase, faMagnifyingGlass);
 import Vue3Lottie from 'vue3-lottie'
 import 'vue3-lottie/dist/style.css'
 import VueCookies from 'vue-cookies'

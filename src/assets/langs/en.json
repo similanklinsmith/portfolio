@@ -2,6 +2,7 @@
     "navigators": {
         "home": "Home",
         "about": "About",
+        "work": "Works",
         "thai": "Thai",
         "english": "English"
     },
@@ -100,15 +101,27 @@
         "certificateLeading": "Certificates Links",
         "otherLeading": "Other Links"
     },
+    "work": {
+        "headerWork": "MY Works",
+        "subheaderWork": "Concluding the personal works and senior project, since 2019s - 2023s",
+        "placeholderDefault": "find by name",
+        "placeholderFocus": "type to find...",
+        "see-more": "see more"
+    },
     "footer": {
         "contact": "Contact",
         "email": "Email",
         "tel": "Tel",
         "menu": "Menu",
         "home": "Home",
-        "about": "About"
+        "about": "About",
+        "work": "Works"
     },
     "splash": {
         "loading": "Loading..."
+    },
+    "vector": {
+        "not-found": "Not Found",
+        "not-found-desc": "Please try search with another word"
     }
 }

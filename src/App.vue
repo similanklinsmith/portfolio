@@ -75,6 +75,9 @@
             <router-link to="/about-me" aria-label="about-me">
               <div class="about">{{ text["footer"]["about"] }}</div>
             </router-link>
+            <router-link to="/all-work" aria-label="all-work">
+              <div class="work">{{ text["footer"]["work"] }}</div>
+            </router-link>
           </div>
         </div>
       </div>

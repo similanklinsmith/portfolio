@@ -86,6 +86,15 @@ export default {
     background-color: $light0;
   }
 }
+.secondary {
+  width: 100%;
+  color: $primaryMain;
+  background-color: $primarySubtle;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background-color: $primaryBG;
+  }
+}
 .no-bg {
   background-color: none;
 }

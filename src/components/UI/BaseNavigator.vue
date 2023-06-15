@@ -13,6 +13,9 @@
       <router-link to="/about-me" aria-label="about-me">
         <BaseTab :tabText="text['navigators']['about']" />
       </router-link>
+      <router-link to="/all-work" aria-label="all-work">
+        <BaseTab :tabText="text['navigators']['work']" />
+      </router-link>
       <div class="langs body-M">
         <span
           class="TH"
