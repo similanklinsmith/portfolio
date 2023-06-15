@@ -1,18 +1,39 @@
 <template>
-  <div class="container-vector">
-    <div class="image-vector">
-      <img src="@/assets/images/not_found.png" alt="not found" />
+  <div>
+    <div class="container-vector" v-if="vectorStyle == 'not-found'">
+      <div class="image-vector">
+        <img src="@/assets/images/not_found.png" alt="not found" />
+      </div>
+      <div class="vector-content">
+        <div class="leading label-L">{{ text["vector"]["not-found"] }}</div>
+        <div class="body-M">{{ text["vector"]["not-found-desc"] }}</div>
+      </div>
     </div>
-    <div class="vector-content">
-      <div class="leading label-L">{{ text["vector"]["not-found"] }}</div>
-      <div class="body-M">{{ text["vector"]["not-found-desc"] }}</div>
+    <div class="container-vector" v-if="vectorStyle == '404'">
+      <div class="image-vector">
+        <img src="@/assets/images/404.png" alt="404 not found" />
+      </div>
+      <div class="vector-content">
+        <div class="leading label-L">{{ text["vector"]["404"] }}</div>
+        <div class="body-M">{{ text["vector"]["404-desc"] }}</div>
+        <BaseButton
+          :icon="'no-icon'"
+          :style="'primary'"
+          :size="'base'"
+          :buttonText='text["vector"]["404-button"]'
+          @onClick="$router.replace('/')"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import BaseButton from "@/components/UI/BaseButton.vue";
 export default {
   name: "BaseVector",
+  props: ["vectorStyle"],
+  components: { BaseButton },
   data() {
     return {
       lang: null,

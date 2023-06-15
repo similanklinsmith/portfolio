@@ -28,7 +28,7 @@
           :buttonText="text['work']['see-more']"
           @cardClickAction="openLink(work.link)"
         />
-        <BaseVector v-if="filterSearch.length == 0" class="not-found" />
+        <BaseVector v-if="filterSearch.length == 0" class="not-found" :vectorStyle="'not-found'" />
       </transition-group>
     </div>
   </div>

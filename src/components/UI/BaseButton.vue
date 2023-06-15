@@ -95,6 +95,14 @@ export default {
     background-color: $primaryBG;
   }
 }
+.primary {
+  color: $light4;
+  background-color: $primaryMain;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    background-color: $primaryDarker;
+  }
+}
 .no-bg {
   background-color: none;
 }

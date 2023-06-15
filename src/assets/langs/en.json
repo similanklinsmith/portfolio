@@ -122,6 +122,9 @@
     },
     "vector": {
         "not-found": "Not Found",
-        "not-found-desc": "Please try search with another word"
+        "not-found-desc": "Please try search with another word",
+        "404": "Page Not Found",
+        "404-desc": "It's looking like you may have taken a wrong turn.",
+        "404-button": "back home"
     }
 }

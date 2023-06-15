@@ -381,6 +381,7 @@ export default {
     changeLanguage(lang) {
       this.$cookies.set("lang", lang);
       window.location.reload();
+      window.scrollTo(0, 0);
     },
   },
   beforeMount() {
