@@ -4,7 +4,7 @@
       <client-only>
         <Vue3Lottie
           animationLink="https://lottie.host/26895b0b-ef5e-483a-a3f5-f0f7d2cb5c80/yEmdEoA8hk.json"
-          :speed="0.5"
+          :speed="0.8"
           class="lottie"
         />
       </client-only>
@@ -426,15 +426,15 @@ export default {
     this.skills = [
       {
         id: 1,
-        leading: this.text["home"]["skillLeading1"],
-        value: this.text["home"]["skillValue1"],
-        icon: this.text["home"]["skillIcon1"],
-      },
-      {
-        id: 2,
         leading: this.text["home"]["skillLeading2"],
         value: this.text["home"]["skillValue2"],
         icon: this.text["home"]["skillIcon2"],
+      },
+      {
+        id: 2,
+        leading: this.text["home"]["skillLeading1"],
+        value: this.text["home"]["skillValue1"],
+        icon: this.text["home"]["skillIcon1"],
       },
       {
         id: 3,

@@ -33,6 +33,7 @@ export default {
   width: 100%;
   &:hover .leading .icon {
     border-radius: 25%;
+    background-color: $light2;
   }
   .leading {
     display: flex;
