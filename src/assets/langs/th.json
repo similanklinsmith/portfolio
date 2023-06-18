@@ -104,7 +104,7 @@
     "work": {
         "headerWork": "ผลงานของฉัน",
         "subheaderWork": "รวบรวมผลงานทั้งส่วนตัว และโปรเจคของวิชาในมหาวิทยาลัย ตั้งแต่ 2019 - 2023",
-        "placeholderDefault": "ค้าหาด้วยชื่อ",
+        "placeholderDefault": "ค้นหาด้วยชื่อ",
         "placeholderFocus": "พิมพ์ค้นหา...",
         "see-more": "ดูเพิ่มเติม"
     },
