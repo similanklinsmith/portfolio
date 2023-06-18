@@ -88,7 +88,7 @@ export default {
         {
           title: "Redesign Twitter Mobile",
           logoStyle: "twitter",
-          year: "In 2022s",
+          year: "In 2021s",
           badges: ["Personal Work", "Figma"],
           link: "https://www.figma.com/file/SSOBohQWSs6E2cunUqVbTq/redesign-twitter?type=design&node-id=917%3A30&t=PML1PhaauV8JV3dg-1",
         },
