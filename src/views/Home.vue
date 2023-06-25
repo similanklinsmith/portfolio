@@ -310,7 +310,7 @@
         >
           <template v-slot:content-act>
             <ul v-for="(list, index) in act.content" :key="index">
-              <li v-html="highlight(list, 'UX/UI designer')"></li>
+              <li v-html="highlight(list, 'Front-end Developer')"></li>
             </ul>
           </template>
         </ActComp>
@@ -426,15 +426,15 @@ export default {
     this.skills = [
       {
         id: 1,
-        leading: this.text["home"]["skillLeading2"],
-        value: this.text["home"]["skillValue2"],
-        icon: this.text["home"]["skillIcon2"],
-      },
-      {
-        id: 2,
         leading: this.text["home"]["skillLeading1"],
         value: this.text["home"]["skillValue1"],
         icon: this.text["home"]["skillIcon1"],
+      },
+      {
+        id: 2,
+        leading: this.text["home"]["skillLeading2"],
+        value: this.text["home"]["skillValue2"],
+        icon: this.text["home"]["skillIcon2"],
       },
       {
         id: 3,
